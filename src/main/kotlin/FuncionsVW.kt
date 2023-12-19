@@ -2,7 +2,6 @@ package Funcions
 
 val RESET: String = "\u001b[0m"
 val BLUE: String = "\u001b[0;34m"
-val RED: String = "\u001b[0;31m"
 val GREEN: String = "\u001b[0;32m"
 
 /**
@@ -32,7 +31,7 @@ fun calcularPreuActual(preuBase: Int, km: Int, anysFurgo: Int, portabicis: Boole
 
     // Restar 200 o 300 euros según el estado de los neumáticos
     when {
-        km < 5000 -> preuActual
+        km < 5000 -> println("Encara no està rodada!")
         km < 10000 -> preuActual - 200
         else -> preuActual - 300
     }
